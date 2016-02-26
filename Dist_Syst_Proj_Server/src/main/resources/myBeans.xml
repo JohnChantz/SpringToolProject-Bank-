@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="employee" class="model.Employee" scope="prototype"></bean>
+<bean id="employeeDAO" class="model.EmployeeDAOImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="customer" class="model.Customer" scope="prototype"></bean>
+<bean id="customerDAO" class="model.CustomerDAOImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="request" class="model.Request" scope="prototype"></bean>
+<bean id="requestDAO" class="model.RequestDAOImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="onlineAccount" class="model.OnlineAccount" scope="prototype"></bean>
+<bean id="OnlineAccountDAO" class="model.OnlineAccountDAOImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="newsletterEmail" class="model.NewsletterEmail" scope="prototype"></bean>
+<bean id="newsletterEmailDAO" class="model.NewsletterEmailDAOImpl">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="dataSource"  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value = "com.mysql.jdbc.Driver"/>
+	<property name="url" value="jdbc:mysql://62.217.125.30:3306/it21368"/>
+	<property name="username" value="it21368"/>
+	<property name="password" value="changeit"/>
+</bean>
+
+</beans>
