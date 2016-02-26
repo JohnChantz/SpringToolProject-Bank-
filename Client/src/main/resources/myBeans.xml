@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="account" class="gr.hua.client.Account" scope="prototype"></bean>
+<bean id="request" class="gr.hua.client.Request" scope="prototype"></bean>
+<bean id="customer" class="gr.hua.client.Customer" scope="prototype"></bean>
+
+</beans>
